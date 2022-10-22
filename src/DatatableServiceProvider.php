@@ -2,7 +2,6 @@
 
 namespace Anam\DatatableFlavour;
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class DatatableServiceProvider extends ServiceProvider
@@ -14,7 +13,7 @@ class DatatableServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->loadViewsFrom(__DIR__ . '/../views', 'dtf');
     }
 
     /**
