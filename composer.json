@@ -1,0 +1,38 @@
+{
+    "name": "ferdousanam/datatable-flavour",
+    "description": "This package contains datatable flavour",
+    "keywords": ["laravel", "datatable"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ferdous Anam",
+            "email": "ferdous.anam@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ext-json": "*",
+        "illuminate/support": "^6|^7|^8|^9"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anam\\DatatableFlavour\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helper.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Anam\\DatatableFlavour\\DatatableServiceProvider"
+            ]
+        }
+    }
+}
