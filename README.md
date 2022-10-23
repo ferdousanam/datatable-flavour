@@ -9,7 +9,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/ferdousanam/ferdousanam/datatable-flavour.git"
+      "url": "https://github.com/ferdousanam/datatable-flavour.git"
     }
   ]
 }
@@ -18,13 +18,13 @@
 #### Run the composer command to install
 
 ```shell
-composer require ferdousanam/ferdousanam/datatable-flavour
+composer require ferdousanam/datatable-flavour
 ```
 
 #### Update the dependency if there is a newer version (_optional_)
 
 ```shell
-composer update ferdousanam/ferdousanam/datatable-flavour
+composer update ferdousanam/datatable-flavour
 ```
 
 ## Author

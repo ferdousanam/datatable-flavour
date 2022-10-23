@@ -14,11 +14,11 @@ class Datatable
         $this->request = request();
     }
 
-    public function orderColumnClass($column, $order = 'asc'): string
+    public function orderColumnClass($column, $direction = 'asc'): string
     {
         $class = 'sorting';
-        if ($this->request->input('order-by') == $column) {
-            $class .= '_' . $this->request->input('order');
+        if ($this->request->input('sort-by') == $column) {
+            $class .= '_' . $this->request->input('sort-direction', $direction);
         }
         return $class;
     }
@@ -28,7 +28,7 @@ class Datatable
         return $paginator->appends($this->request->except($except))->links();
     }
 
-    public function footerShowingResult(LengthAwarePaginator $paginator): string
+    public function showingResult(LengthAwarePaginator $paginator): string
     {
         return "Showing {$paginator->firstItem()} to {$paginator->lastItem()} of {$paginator->total()} entries";
     }

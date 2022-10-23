@@ -1,13 +1,13 @@
 <script>
-    $('th[data-order-column]').click(function (event) {
+    $('th[data-sort-by]').click(function (event) {
         var form = $('.filter-form');
-        var inputOrderBy = $("<input>").attr("type", "hidden").attr("name", 'order-by').val($(this).data('order-column'));
-        var order = 'asc';
+        var inputSortBy = $("<input>").attr("type", "hidden").attr("name", 'sort-by').val($(this).data('sort-by'));
+        var sortDirection = 'asc';
         if ($(this).hasClass('sorting_asc')) {
-            order = 'desc';
+            sortDirection = 'desc';
         }
-        var inputOrder = $("<input>").attr("type", "hidden").attr("name", 'order').val(order);
-        form.append($(inputOrderBy)).append(inputOrder);
+        var inputSortDirection = $("<input>").attr("type", "hidden").attr("name", 'sort-direction').val(sortDirection);
+        form.append($(inputSortBy)).append(inputSortDirection);
         form.submit();
     });
 </script>
